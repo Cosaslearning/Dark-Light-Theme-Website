@@ -1,0 +1,176 @@
+/*-----------------  GOOGLE FONTS  -----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap');
+
+/*-----------------  VARIABLES  -----------------*/
+:root {
+    /* Colors */ 
+    --orange-color: rgb(246, 99, 53);
+    --primary-color: rgb(27, 31, 41);
+    --text-color: rgb(96, 97, 99);
+    --secondary-color: rgb(237, 242, 252);
+    --white-color: rgb(255, 255, 255);
+    --para-color:rgb(96, 97, 99);
+    --dark-color:rgb(27, 31, 41);
+    --yellow-color: rgb(253, 184, 19);
+}
+
+html{
+    font-size: 10px;
+    /* Now 1rem = 10px */
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.dark-theme {
+    --primary-color: rgb(237, 242, 252);
+    --secondary-color: rgb(27, 31, 41);
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: var(--secondary-color);
+}
+nav {
+    width: 84%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 15rem;
+    cursor: pointer;
+}
+nav ul {
+    flex: 1;
+    text-align: right;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 1rem 2rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    position: relative;
+    padding: 1rem;
+    font-weight: 600;
+    z-index: 10;
+    transition: 0.5s;
+}
+nav ul li a::before {
+    content: '';
+    width: 100%;
+    height: 0rem;
+    background: var(--orange-color);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: -0.5rem;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    transition: 0.5s;
+} 
+nav ul li a:hover {
+    color: var(--white-color);
+}
+nav ul li a:hover::before {
+    height: 10.5rem;
+}
+.content {
+    margin-left: 8%;
+    margin-top: 8%;
+}
+.content h1 {
+    font-size: 7rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+.content h1 span {
+    color: var(--orange-color);
+}
+.content p {
+    color: var(--para-color);
+    line-height: 2.2rem;
+    font-size: 1.6rem;
+}
+.content a {
+    background: var(--primary-color);
+    font-size: 1.6rem;
+    padding: 1rem 1.8rem;
+    text-decoration: none;
+    color: var(--secondary-color);
+    display: inline-block;
+    margin: 3rem 0;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    clip-path: polygon(12% 0, 89% 0, 100% 50%, 87% 100%, 13% 100%, 0% 50%);
+}
+.content a:hover {
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    letter-spacing: 0.2rem;
+    clip-path: polygon(88% 0, 100% 50%, 89% 100%, 0% 100%, 8% 51%, 0% 0%);
+}
+.img_box {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 7rem;
+}
+.img_box img {
+    height: 100%;
+    position: absolute;   
+    transition: 0.5s;
+}
+.img_box .background_img {
+    right: 0;
+    bottom: 0;
+}
+.img_box .main_img {
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+.img_box:hover .background_img {
+    bottom: 2rem;
+}
+.img_box:hover .main_img {
+    left: 54%;
+}
+.social_icons {
+    margin-left: 8%;
+    margin-top: 10rem;
+}
+.social_icons .social_icon {
+    font-size: 3rem;
+    margin-right: 2rem;
+    color: var(--primary-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.social_icons .social_icon:hover {
+    color: var(--orange-color);
+}
+#icon {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.moon{
+    color: var(--dark-color);
+}
+.sun{
+    color: var(--yellow-color);
+}
